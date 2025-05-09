@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="app_name">PlantSafe</string>
+    <string name="app_name_display">PlantSafe</string>
+    <string name="app_logo_description">Logo de PlantSafe</string>
+    <string name="app_subtitle">Detección de Enfermedades en Hojas</string>
+    <string name="feature_card_title">Protección de Plantas</string>
+    <string name="plant_health_icon_desc">Icono de Salud de Planta</string>
+    <string name="feature_card_description">Nuestra herramienta de IA detecta la gravedad de la enfermedad analizando qué parte de la hoja está afectada. Sube una imagen o toma una foto para comenzar.</string>
+    <string name="scan_section_title">Analiza Tu Hoja</string>
+    <string name="take_picture_button">Tomar una Foto</string>
+    <string name="upload_gallery_button">Subir de Galería</string>
+    <string name="analyze_button">Analizar Hoja</string>
+    <string name="analysis_results_title">Resultados del Análisis</string>
+    <string name="loading_text">Analizando...</string>
+    <string name="detected_disease_label">Condición Detectada:</string>
+    <string name="affected_area_label">Área Afectada:</string>
+    <string name="nav_home">Inicio</string>
+    <string name="nav_detect">Detectar</string>
+    <string name="nav_history">Historial</string>
+    <string name="nav_info">Info</string>
+    <string name="title_activity_detect">Analizar Hoja</string>
+    <string name="menu_language">Idioma</string>
+
+    <!-- Weather Widget -->
+    <string name="weather_error_message">Datos del clima no disponibles</string> <!-- ADDED Spanish translation -->
+    <string name="ai_explanation_button">Explicación IA</string>
+    <string name="ai_explanation_title">Explicación</string>
+    <string name="ai_explanation_loading">Generando explicación...</string>
+    <string name="ai_explanation_error">No se pudo obtener la explicación.</string>
+    <string name="dialog_ok">OK</string>
+    <string name="fullscreen_image_desc">Imagen anotada en pantalla completa</string>
+</resources>

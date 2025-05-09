@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Georgia Peach Theme - Base Palette -->
+    <color name="peach_primary">#FFB38A</color> <!-- Soft Peach -->
+    <color name="peach_dark">#E08A6F</color>   <!-- Darker Peach/Terracotta -->
+    <color name="peach_light">#FFE0D1</color>  <!-- Lighter Peach for Strokes/Highlights/Backgrounds -->
+    <color name="georgia_green">#367E66</color> <!-- Pine Green -->
+    <color name="georgia_green_dark">#2A6350</color> <!-- Darker Pine Green -->
+    <color name="accent_blue">#6A7FDB</color>   <!-- Blueberry/Accent Blue (for Analyze button) -->
+    <color name="background_light">#FFF9F5</color> <!-- Very Light Cream/Peach Background -->
+    <color name="card_background">#FFFFFF</color> <!-- White cards for contrast -->
+    <color name="text_dark">#333333</color>      <!-- Dark Grey for main text -->
+    <color name="text_medium">#666666</color>    <!-- Medium Grey for subtitles -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Theme Role Colors (Used in themes.xml) -->
+    <color name="colorPrimary">@color/georgia_green</color>
+    <color name="colorPrimaryVariant">@color/georgia_green_dark</color>
+    <color name="colorOnPrimary">@color/white</color>
+
+    <color name="colorSecondary">@color/peach_primary</color>
+    <color name="colorSecondaryVariant">@color/peach_dark</color>
+    <color name="colorOnSecondary">@color/text_dark</color> <!-- Text on peach works better dark -->
+
+    <!-- Specific UI Element Colors (Used directly in layouts) -->
+
+    <!-- Buttons -->
+    <color name="button_primary_bg">@color/colorPrimary</color> <!-- Take Picture -->
+    <color name="button_primary_text">@color/colorOnPrimary</color>
+
+    <color name="button_outline_stroke">@color/colorSecondary</color> <!-- Upload -->
+    <color name="button_outline_text">@color/colorPrimary</color> <!-- Text color for outline button -->
+
+    <color name="button_analyze_bg">@color/accent_blue</color> <!-- Analyze -->
+    <color name="button_analyze_text">@color/white</color>
+
+    <!-- Progress Bar in DetectActivity -->
+    <color name="progress_bar_track">@color/peach_light</color>
+    <color name="progress_bar_progress">@color/peach_dark</color>
+
+    <!-- Bottom Navigation -->
+    <color name="bottom_nav_selected">@color/colorPrimary</color>
+    <color name="bottom_nav_unselected">@color/text_medium</color>
+    <color name="bottom_nav_background">@color/white</color>
+    <!-- Add these inside the <resources> tag in colors.xml -->
+    <color name="severity_low">#4CAF50</color>   <!-- Green -->
+    <color name="severity_medium">#FFEB3B</color> <!-- Yellow -->
+    <color name="severity_high">#F44336</color>  <!-- Red -->
+
+</resources>

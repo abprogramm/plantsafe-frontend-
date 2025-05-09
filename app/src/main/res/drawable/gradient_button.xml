@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#24401C" /> <!-- Dark Green -->
+            <corners android:radius="35dp"/> <!-- Rounded corners -->
+        </shape>
+    </item>
+    <item android:left="1dp" android:right="1dp" android:top="1dp" android:bottom="1dp">
+        <shape>
+            <gradient
+                android:startColor="#24401C"
+                android:endColor="#A9F2AC"
+                android:angle="270"/> <!-- Gradient from Dark Green to Light Green -->
+            <corners android:radius="35dp"/> <!-- Rounded corners -->
+        </shape>
+    </item>
+</layer-list>

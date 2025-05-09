@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">PlantSafe</string>
+    <string name="app_name_display">PlantSafe</string>
+    <string name="app_logo_description">PlantSafe App Logo</string>
+    <string name="app_subtitle">Leaf Disease Detection</string>
+    <string name="feature_card_title">Plant Protection</string>
+    <string name="plant_health_icon_desc">Plant Health Icon</string>
+    <string name="feature_card_description">Our AI-powered tool detects disease severity by analyzing how much of the leaf is affected. Upload an image or take a picture to begin.</string>
+    <string name="scan_section_title">Analyze Your Leaf</string>
+    <string name="take_picture_button">Take a Picture</string>
+    <string name="upload_gallery_button">Upload from Gallery</string>
+    <string name="image_preview_desc">Preview of selected leaf image</string>
+    <string name="analyze_button">Analyze Leaf</string>
+    <string name="analysis_results_title">Analysis Results</string>
+    <string name="loading_text">Analyzing…</string>
+    <string name="detected_disease_label">Detected Condition:</string>
+    <string name="affected_area_label">Affected Area:</string>
+
+    <!-- Bottom Nav Menu Items -->
+    <string name="nav_home">Home</string>
+    <string name="nav_detect">Detect</string>
+    <string name="nav_history">History</string>
+    <string name="nav_info">Info</string>
+
+    <!-- Activity Titles -->
+    <string name="title_activity_detect">Analyze Leaf</string>
+
+    <!-- Options Menu -->
+    <string name="menu_language">Language</string>
+
+    <!-- Weather Widget -->
+    <string name="weather_error_message">Weather data unavailable</string> <!-- ADDED for weather widget -->
+    <string name="ai_explanation_button">AI Explanation</string>
+    <string name="ai_explanation_title">Explanation</string>
+    <string name="ai_explanation_loading">Generating explanation…</string>
+    <string name="ai_explanation_error">Could not get explanation.</string>
+    <string name="dialog_ok">OK</string>
+    <string name="fullscreen_image_desc">Fullscreen annotated image</string>
+
+
+</resources>

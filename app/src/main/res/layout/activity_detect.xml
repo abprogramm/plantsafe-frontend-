@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fitsSystemWindows="true"
+    tools:context=".DetectActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarDetect"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewDetect"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge"
+                android:background="@color/peach_light"
+                app:strokeColor="@color/peach_primary"
+                app:strokeWidth="1dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAnalyzeDetect"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/analyze_button"
+                android:textColor="@color/button_analyze_text"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/button_analyze_bg"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_analyze"
+                app:iconTint="@color/button_analyze_text"
+                app:iconPadding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/imageViewDetect"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:enabled="true" />
+
+            <FrameLayout
+                android:id="@+id/analysisStatusContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/buttonAnalyzeDetect"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/loadingAnimationView"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    app:lottie_rawRes="@raw/loading_plant_scan"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="false"
+                    android:visibility="gone" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/resultsCardDetect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/card_background"
+                    app:strokeColor="@color/peach_light"
+                    app:strokeWidth="1dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/resultsContentDetect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/analysis_results_title"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginBottom="16dp"/>
+
+                        <TextView
+                            android:id="@+id/textViewLeafResultsList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp"
+                            android:lineSpacingExtra="4dp"
+                            android:visibility="gone"
+                            tools:text="Leaf 1: 12.3%\nLeaf 2: 5.1%\nLeaf 3: 22.0%" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonAiExplanation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/ai_explanation_button"
+                android:textColor="@color/white"
+                android:background="@drawable/button_gradient_explanation"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:drawableStart="@drawable/ic_ai"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|start"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/analysisStatusContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
