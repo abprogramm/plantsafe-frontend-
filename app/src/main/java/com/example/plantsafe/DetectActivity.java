@@ -208,7 +208,7 @@ public class DetectActivity extends AppCompatActivity {
     }
 
     private void setupRetrofit() {
-        String backendBaseUrl = "https://10.0.2.2:6000/";
+        String backendBaseUrl = "https://abcomputer-plantsafe-backend.hf.space/analyze/";
         String geminiBaseUrl = "https://generativelanguage.googleapis.com/";
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor(message -> Log.d("OkHttp", message));
